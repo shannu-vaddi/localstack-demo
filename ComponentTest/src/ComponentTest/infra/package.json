@@ -1,0 +1,36 @@
+{
+  "name": "cdk",
+  "version": "0.1.0",
+  "bin": {
+    "cdk": "bin/cdk.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "build-lambda": "dotnet lambda package --configuration release --framework net8.0 --function-architecture X86_64 --output-package package/sqs-consumer-lambda.zip --project-location ../../ComponentTest",
+    "component-test": "vitest --config test/vitest.config.ts --run"
+  },
+  "devDependencies": {
+    "@aws-cdk/toolkit-lib": "^1.2.4",
+    "@aws-sdk/client-cloudformation": "^3.840.0",
+    "@aws-sdk/client-sqs": "^3.840.0",
+    "@testcontainers/localstack": "^11.2.0",
+    "@testcontainers/mockserver": "^11.6.0",
+    "@types/node": "22.7.9",
+    "aws-cdk": "2.1020.2",
+    "aws-cdk-lib": "2.203.1",
+    "mockserver-client": "^5.15.0",
+    "testcontainers": "^11.2.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.5",
+    "typescript": "~5.6.3",
+    "vitest": "^3.0.7"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudformation": "^3.893.0",
+    "@aws-sdk/client-lambda": "^3.893.0",
+    "constructs": "^10.4.2",
+    "dotenv": "^16.4.7"
+  }
+}

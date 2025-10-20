@@ -34,7 +34,7 @@ describe('SQS Consumer Lambda Test', () => {
             const queueUrl = (await cloudFormationManager.getExportedResourceValue('test-demo-queue-url'))!;
 
             await sendMessage(queueUrl)
-            await new Promise(resolve => setTimeout(resolve, 5000));
+            await new Promise(resolve => setTimeout(resolve, 10000));
             await mockClient!.verify({
                 method: 'POST',
                 path: '/external-api/demo',

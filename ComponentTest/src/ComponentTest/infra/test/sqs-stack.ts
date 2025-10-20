@@ -8,7 +8,7 @@ import {StringParameter} from "aws-cdk-lib/aws-ssm";
 export class SQSStack extends cdk.Stack {
     constructor(scope: Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
-        const vpc = new Vpc(this, 'core-vpc', {
+        new Vpc(this, 'core-vpc', {
             vpcName: 'core-vpc',
             ipAddresses: IpAddresses.cidr('10.0.0.0/16'),
             natGateways: 0

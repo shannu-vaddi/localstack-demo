@@ -14,7 +14,6 @@ export async function setup() {
         .withNetwork(network)
         .withNetworkAliases('localhost.localstack.cloud')
         .withEnvironment({
-            LOCALSTACK_AUTH_TOKEN: process.env.LOCALSTACK_AUTH_TOKEN!,
             SERVICES:
                 'ssm,ec2,cloudformation,s3,iam,sqs,logs,lambda',
             LOCALSTACK_HOST: 'localhost.localstack.cloud',

@@ -65,13 +65,3 @@ ComponentTest.sln
    ```
 
 > 🧠 The tests automatically start LocalStack and MockServer containers using Testcontainers, deploy the stack, and verify the Lambda’s behavior.
-
----
-
-## 🧠 Notes
-
-- LocalStack and MockServer are managed via **Testcontainers**, so no manual setup is needed.
-- Tests validate end-to-end functionality between **SQS → Lambda → External API (MockServer)**.
-- This example can be used as a **template** for component testing serverless architectures locally.
-
----
